@@ -1,0 +1,169 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+::placeholder {
+    color: #bbb;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding-top: 40px;
+}
+
+.wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.todo-cat {
+    width: 800px;
+    min-height: 400px;
+    border: 1px solid #000;
+    padding: 10px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#warning_list-limit {
+    background: #902;
+    color: #fff;
+    text-align: center;
+}
+
+.todo-cat-header {
+	padding-top: 20px;
+    text-align: center;
+    font-weight: normal;
+}
+
+.form {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100px;
+	margin: 0 20px 10px 20px;
+    border-bottom: 2px solid #000;
+    padding: 25px;
+}
+
+.task-input {
+    flex-grow: 1;
+    margin-right: 10px;
+    border: 1px solid #000;
+    padding: 2px 5px;
+    font-size: 12px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex: 1;
+}
+
+.paw-img {
+    width: 60px;
+    height: 60px;
+}
+
+#list {
+    font-size: 25px;
+    background: #ffffff;
+    padding: 20px;
+    padding-bottom: 10px;
+    min-height: 50px;
+}
+
+.action, .text {
+    display: inline-block;
+    width: 90%;
+}
+.btn-delete, .checkbox{
+    display: inline-block;
+    width: 7%;
+}
+
+.form input {
+    border: none;
+    font-size: 30px;
+    padding: 5px 20px;
+}
+
+input:active {
+    border: none;
+}
+input, .btn-delete {
+    outline:none;
+}
+
+#taskInput {
+    border: 1px solid #000;
+    color: #4d4d4d;
+    min-width: 650px;
+}
+.material-icons {
+    padding: 3px;
+    font-size: 27px;
+    font-weight: bold;
+}
+#addTaskButton {
+    margin-left: 5px;
+    height: 100%;
+}
+#addTaskButton {
+    padding: 5px;
+    text-align: center;
+    background: #000;
+    color: #fff;
+    border-radius: 3px;
+    border: 1px solid #000;
+}
+.btn-delete {
+    background: inherit;
+    border: none;
+}
+.btn-delete i {
+    font-size: 40px;
+}
+#addTaskButton:hover {
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+}
+.btn-delete:hover {
+    color: #222;
+    cursor: pointer;
+}
+i.material-icons.hidden:hover{
+	cursor: pointer;
+}
+.task {
+    padding:0 10px;
+    margin: 5px 10px;
+    display: flex;
+}
+
+
+.action i:nth-child(2) {
+    display: none;
+}
+.action.checked .hidden {
+    display: none;
+}
+.checked i:nth-child(2) {
+    display: block;
+}
+
+.task .text {
+    flex: 1 1 0;
+}
+            
+.task.over {
+  border: 2px dashed #000;
+}
