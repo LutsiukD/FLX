@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 900px;
+}
+
+.application-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 100px auto;  
+  width: 400px;
+  padding: 10px;
+}
+
+header {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.add-new-btn {
+  border-radius: 2px;
+  margin: 10px 40px;
+  padding: 0 15px;
+  font-size: 1.2em;
+}
+
+.btn-cancel, 
+.btn-add {
+  border-radius: 2px;
+  margin: 10px 20px;
+  padding: 0 5px;
+  font-size: 1.2em;
+}
+
+.delete-btn,
+.check-btn {
+  padding: 0;
+}
+  border: 0;
+  background: none;
+
+.todo-notifier {
+  padding: 10px 0;
+  font-size: 1.2em;
+}
+
+.todo-input-task {
+  padding: 5px 10px;
+  width: 300px;
+}
+
+.todo-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.list-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+}
