@@ -1,0 +1,83 @@
+@import "variables";
+h1, h3 {
+	color: @blue;
+}
+hr {
+	background-color: lighten(@blue, 30%);
+}
+
+.img-fluid {
+	width: 100%;
+}
+
+.container {
+	padding-right: 0;
+	padding-left: 0;
+}
+.navbar {
+	border-bottom: 1px solid lighten(@grey, 40%);
+	padding: 0 1rem;
+}
+
+.active-nav-item {
+	background-color: @blue;	
+}
+
+.nav-item {
+	&:hover {
+		.active-nav-item();
+		.nav-link:hover {
+			color: @white;
+		}
+	}
+	&.active {
+		.active-nav-item();
+		& > .nav-link{
+			color: @white !important;
+		}
+	}
+	.nav-link {
+		padding: 0.8rem 1rem;
+	}
+}
+
+.navbar-toggler{
+	margin: 0.8rem 0.5rem;
+}
+
+.classes-item {
+	margin-bottom: 1.5rem;
+	cursor: pointer;
+	&.cardio-kickboxing {
+		background-color: @red;
+		border: 1px solid @red;
+	}
+	&.fitness {
+		background-color: @blue;
+		border: 1px solid @blue;
+	}
+	&.zumba {
+		background-color: @orange;
+		border: 1px solid @orange;
+	}
+	&.bootcamp {
+		background-color: @green;
+		border: 1px solid @green;
+	}
+
+	.classes-item-name {
+		width: 100%;
+		text-align: center;
+		padding: 0.5rem 0.5rem;
+		a {
+			color: @white;
+		}
+	}
+}
+
+.footer {
+	background-color: @grey;
+	padding: 0.5rem;
+	color: @white;
+}
+
