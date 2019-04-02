@@ -1,0 +1,43 @@
+* {
+box-sizing: border-box;
+} 
+
+.container {
+	margin: 0 auto;
+	width: 70%;
+}
+
+.card {
+	margin-top: 20px;
+	padding: 20px;
+	box-shadow: 0px 0px 8px 0px black;
+	display: flex;
+}
+
+.card_main,
+.card_contacts {
+	width: 50%;
+}
+
+.card-main_image {
+	width: 50%;
+
+}
+
+.image {
+	max-width: 100%;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+p {
+	font-weight: 600;
+	font-size: 1.2em;
+}
+
+.username {
+	font-size: 1.4em;
+	font-weight: 600;
+}
