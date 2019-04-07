@@ -1,0 +1,39 @@
+{
+  "name": "flx_homework_19",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "gulp-scripts": "gulp scripts",
+    "gulp-styles": "gulp styles",
+    "gulp-imageMin": "gulp imageMin",
+    "gulp-htmlMin": "gulp htmlMin",
+    "gulp-watch": "gulp watch",
+    "gulp-clean": "gulp clean",
+    "gulp-build": "gulp build",
+    "gulp-dev": "gulp dev"
+  },
+  "author": "Dmytro Lutsiuk",
+  "description": "",
+  "dependencies": {
+    "gulp-cli": "^2.1.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-less": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-path": "^4.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-watch": "^5.0.1"
+  }
+}
