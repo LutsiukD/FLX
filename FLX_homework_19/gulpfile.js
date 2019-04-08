@@ -1,4 +1,3 @@
-'use strict';
 const gulp = require('gulp');
 const less = require('gulp-less');
 const path = require('path');
@@ -20,9 +19,9 @@ function styles() {
     .pipe(less({
       paths: [ path.join(__dirname, 'less', 'includes') ]
     }))
-    .pipe(sourcemaps.write("."))
     .pipe(concat('styles.css'))
     .pipe(cleanCSS({level: 2}))
+    .pipe(sourcemaps.write("."))
     .pipe(gulp.dest('./dist/css'))
     .pipe(browserSync.reload({ stream: true }));
 }
@@ -75,16 +74,10 @@ function watching() {
 }
 
 function clean() {
-	return del('./dist/*');
+	return gulp.src('./dist/*', {read: false})
+        .pipe(del());
 }
 
 
-gulp.task('styles', styles);
-gulp.task('scripts', scripts);
-gulp.task('imageMin', imageMin);
-gulp.task('htmlMin', htmlMin);
-gulp.task('watch', watching);	
-gulp.task('clean', clean);
-
-gulp.task('build', gulp.series( gulp.parallel(styles, scripts, htmlMin, imageMin)));
-gulp.task('dev', gulp.series('build','watch'));
+gulp.task('build', gulp.series(clean, gulp.parallel(styles, scripts, htmlMin, imageMin)));
+gulp.task('serve', gulp.series('build', watching));

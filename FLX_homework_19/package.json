@@ -4,14 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "gulp-scripts": "gulp scripts",
-    "gulp-styles": "gulp styles",
-    "gulp-imageMin": "gulp imageMin",
-    "gulp-htmlMin": "gulp htmlMin",
-    "gulp-watch": "gulp watch",
-    "gulp-clean": "gulp clean",
     "gulp-build": "gulp build",
-    "gulp-dev": "gulp dev"
+    "gulp-dev": "gulp serve"
   },
   "author": "Dmytro Lutsiuk",
   "description": "",

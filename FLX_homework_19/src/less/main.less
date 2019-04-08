@@ -1,9 +1,10 @@
+@import "variables";
+
 * {
 	box-sizing: border-box;
 }
 .wrapper {
 	font-family: 'Roboto', sans-serif;
-	// font-variant: italic;
 	font-weight: 200;
 	width: 60%;
 	margin: 0 auto;
@@ -11,18 +12,12 @@
 }
 
 header {
-	// display: flex;
-	// justify-content: center;
-	flex-direction: column;
-	.logo {
-		font-size: 30px;
-		// text-align: center;
-
+	.logo-img {
+		max-width: 60%;
 	}
 	.about {
 		line-height: 25px;
 		.rules {
-			// width: 40%;
 			.rule {
 				list-style-type: none; 
 			}
@@ -38,17 +33,17 @@ main {
 			margin: 10px;
 			cursor: pointer;
 			&:hover {
-				box-shadow: 0 0 5px 5px #f0f0f0;
+				box-shadow: 0 0 5px 5px @grey;
 			}
 		}
 		.reset-btn {
-			background-color: #F89494;
-			color: #fff;
+			background-color: @red;
+			color: @white;
 			border-color: transparent;
 		}
 		.play-btn {
-			background-color: #58BAF8;
-			color: #fff;
+			background-color: @blue;
+			color: @white;
 			border-color: transparent;			
 		}
 	}

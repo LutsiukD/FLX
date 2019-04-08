@@ -7,21 +7,29 @@ const playGame = () => {
 			myWins++;
 		    rounds++;
 		    printLogs('WON');
-		}
-		if(myMove === 'Paper' && compMove === 'Scissors' ||
-		   myMove === 'Rock' && compMove === 'Paper' ||
-		   myMove === 'Scissors' && compMove === 'Rock') {
-			myWins++;
+		} else if(myMove === 'Paper' && compMove === 'Scissors' ||
+		    myMove === 'Rock' && compMove === 'Paper' ||
+		    myMove === 'Scissors' && compMove === 'Rock') {
+			compWins++;
 		    rounds++;
 		    printLogs('LOST');
+		} else if(myMove === compMove) {
+			rounds++;
+			printLogs('played a DRAW!');
 		}
-	} else {
+	} 
+
+	if(myWins === 3  || compWins === 3) {
 		if(myWins > compWins) {
-			alert('Congratulation! You\'ve WON!')
-			resetData();
+			setTimeout(()=> {
+				alert('Congratulation! You\'ve WON!');
+				resetData();
+			}, 300);
 		} else {
-			alert('Unfortunately You\'ve LOSED!')
-			resetData();
+			setTimeout(()=> {
+				alert('Congratulation! You\'ve LOSED!');
+				resetData();
+			}, 300);
 		}
 	}
 }
