@@ -1,0 +1,11 @@
+<div class="app">
+  <app-nav
+    user="$ctrl.user"
+    on-logout="$ctrl.logout($event);"
+    button-title="{{$ctrl.button}}">
+  </app-nav>
+
+  <ui-view>
+    <movies movies="$ctrl.movies"></movies>
+  </ui-view>
+</div>

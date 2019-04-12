@@ -1,0 +1,9 @@
+<div class="movie-info">
+  <h2>{{::$ctrl.movie.title}}</h2>
+  <h3 ng-if="$ctrl.movie.tagline">{{::$ctrl.movie.tagline}}</h3>
+  <img src="{{$ctrl.movie.poster_path}}"
+       alt="{{$ctrl.movie.title}}">
+  <p>Release date: <strong>{{$ctrl.movie.release_date}}</strong></p>
+  <p>{{::$ctrl.movie.overview}}</p>
+  <a ui-sref="app">Back</a>
+</div>

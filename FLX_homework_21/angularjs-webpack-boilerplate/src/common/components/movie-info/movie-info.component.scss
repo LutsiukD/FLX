@@ -1,0 +1,21 @@
+.movie-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    max-height: 400px;
+  }
+
+  p {
+    margin: 5px 0;
+  }
+
+  a {
+    display: block;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid #a09c9c;
+  }
+}

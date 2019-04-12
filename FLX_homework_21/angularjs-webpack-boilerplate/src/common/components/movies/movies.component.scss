@@ -1,0 +1,32 @@
+.movies {
+  padding: 40px 70px;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__overview {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 40%;
+    flex-shrink: 1;
+    flex-grow: 1;
+    margin-bottom: 40px;
+    margin-left: 10px;
+    padding: 20px;
+
+    &:hover {
+      border-radius: 5px;
+      background-color: rgba(0, 0, 0, 0.12);
+      cursor: pointer;
+    }
+
+    div {
+      display: flex;
+    }
+
+    img {
+      width: auto;
+      height: 150px;
+      margin: 0 10px;
+    }
+  }
+}
