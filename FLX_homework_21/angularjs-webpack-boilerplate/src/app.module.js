@@ -23,7 +23,6 @@ const _app = angular
   .module(MODULE_NAME, MODULE_IMPORTS)
   .component(AppComponent.selector, AppComponent)
   .config(($stateProvider, $locationProvider, $urlRouterProvider) => {
-    'ngInject';
 
     $stateProvider
       .state(AppComponent.selector, {
@@ -53,8 +52,6 @@ const _app = angular
   })
   .value('EventEmitter', payload => ({ $event: payload }))
   .run(($transitions, cfpLoadingBar) => {
-    'ngInject';
-
     $transitions.onStart({}, cfpLoadingBar.start);
     $transitions.onSuccess({}, cfpLoadingBar.complete);
   })

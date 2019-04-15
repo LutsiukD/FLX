@@ -1,6 +1,7 @@
+import { MoviesService } from '../../services/movies.service';
+
 export class MovieInfoController {
   constructor($stateParams, moviesService) {
-    'ngInject';
 
     this.moviesService = moviesService;
     this.$stateParams = $stateParams;
@@ -12,3 +13,6 @@ export class MovieInfoController {
     });
   }
 }
+
+MovieInfoController.$inject = ['$stateParams', 'moviesService'];
+

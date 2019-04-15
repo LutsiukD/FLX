@@ -1,7 +1,5 @@
 export class AppNavController {
   constructor(EventEmitter) {
-    'ngInject';
-
     this.EventEmitter = EventEmitter;
   }
 
@@ -18,3 +16,5 @@ export class AppNavController {
     );
   }
 }
+
+AppNavController.$inject = ['EventEmitter'];

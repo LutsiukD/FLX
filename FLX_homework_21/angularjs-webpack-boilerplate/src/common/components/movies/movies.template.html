@@ -1,13 +1,40 @@
+<div class="search">
+  <label for="search-movie" class="search__label">Find movie</label>
+  <input
+    id="search-movie"
+    type="text"
+    placeholder="Enter movie name"
+    ng-model="searchMovie"
+    class="search__input"
+  />
+</div>
+
 <div class="movies">
-  <a ng-repeat="movie in $ctrl.movies track by $index"
-     class="movies__overview"
-     fresh-movie
-     ui-sref="movie-info({ movieId: movie.id })">
-    <h2>{{movie.title}}</h2>
-    <div>
-      <img src="{{movie.poster_path}}"
-           alt="{{movie.title}}">
-      <p>{{movie.overview ? movie.overview : 'No description available'}}</p>
+  <a
+    ng-repeat="movie in $ctrl.movies | filter:searchMovie track by $index"
+    class="movies__overview"
+    fresh-movie
+    ui-sref="movie-info({ movieId: movie.id })"
+  >
+    <h2>{{ movie.title }}</h2>
+    <div class="movies__info">
+      <img ng-src="{{ movie.poster_path }}" alt="{{ movie.title }}" />
+      <div class="movies__details">
+        <p class="movies__details-overview" >
+          {{ movie.overview ? movie.overview : 'No description available' }}
+        </p>
+        <div class="movies__details-column">
+          <p>Runtime: {{ movie.runtime }} min</p>
+          <p>Avarage vote: {{ movie.vote_average }}/10</p>
+          <p class="movies__details-genres">Genres: 
+            <ul class="genres">
+              <li ng-repeat="genre in movie.genres">
+                {{ genre }} 
+              </li>
+            </ul>
+          </p>  
+        </div>  
+      </div>
     </div>
   </a>
 </div>

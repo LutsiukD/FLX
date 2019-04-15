@@ -6,7 +6,7 @@ export class AppController {
     this.moviesService = moviesService;
     this.button = null;
     this.user = {};
-    this.movies = [];
+    this.movies = [];   // mb clean
   }
 
   $onInit() {

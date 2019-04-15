@@ -28,5 +28,37 @@
       height: 150px;
       margin: 0 10px;
     }
+    .movies__details {
+      &-column {
+        display: flex;
+        flex-direction: column;
+        margin-left: 30px;
+        p {
+          margin-bottom: 10px;
+        }
+        .movies__details-genres {
+          font-weight: bold;
+        }
+      }
+      .movies__details-overview {
+        height: 150px;
+        width: 200px;
+        overflow: hidden; 
+      }
+    }
+  }
+}
+
+.search {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  padding: 20px 60px;
+  &__label {
+    font-size: 20px;
+    padding: 5px 0;
+  }
+  &__input {
+    padding: 10px;
   }
 }

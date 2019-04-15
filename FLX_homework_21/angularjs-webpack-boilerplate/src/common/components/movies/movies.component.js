@@ -1,5 +1,6 @@
-import { MoviesController } from "./movies.controller";
+import  { MoviesController } from "./movies.controller";
 import './movies.component.scss';
+
 
 export const MoviesComponent = {
   selector: 'movies',
@@ -9,3 +10,4 @@ export const MoviesComponent = {
   template: require(`./movies.template.html`),
   controller: MoviesController
 };
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
