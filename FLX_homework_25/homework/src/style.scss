@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+$turqoise: #26a69a;
+$red: #E57373;
+$gray: #f8f8f8;
+$white: #fff;
+
+$shadow:
+    0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12),
+    0 1px 5px 0 rgba(0, 0, 0, 0.2);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.root {
+    font-family: 'Open Sans', sans-serif;
+    max-width: 90%;
+    margin: 0 auto;
+    .user-search__container {
+        width: 100%;
+        margin: 10px 0 20px 0;
+        padding: 10px 0;
+        border-bottom: 2px solid darken($gray, 10%);
+        text-align: center;
+        .user-search__form {
+            margin: 0 auto;
+            .user-search__input {
+                border: none;
+                border-bottom: 1px solid #000;
+                padding: 10px;
+                font-size: 16px;
+                &:active {
+                  outline-color: $turqoise;
+                }
+            }
+        }
+    }
+    .users-list__container {
+        .table {
+            width: 100%;
+            border-spacing: 0;
+            thead {
+                background-color: $turqoise;
+                tr {
+                    th {
+                        padding: 20px 10px;
+                        text-align: left;
+                        color: $white
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    &:nth-child(odd) {
+                        background: darken($gray, 5%);
+                    }
+                    td {
+                        padding: 10px;
+                        .removeBtn {
+                            border: none;
+                            padding: 10px 20px;
+                            color: $white;
+                            background-color: $red;
+                            cursor: pointer;
+                            &:hover {
+                                box-shadow: $shadow;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .load-more {
+        margin: 20px 0;
+        border-top: 2px solid darken($gray, 10%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        .load-more__msg {
+            padding: 10px;
+        }
+        .load-more__btn {
+            width: 50%;
+            background-color: darken($gray, 10%);
+            border-radius: 20px;
+            padding: 10px;
+            text-transform: uppercase;
+        }
+
+    }    
+}
+
+
+
+
+
+

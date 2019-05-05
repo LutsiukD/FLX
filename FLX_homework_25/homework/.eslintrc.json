@@ -1,0 +1,23 @@
+{
+	"extends": "google",
+	"parserOptions": {
+		"ecmaVersion": 2018,
+		"sourceType": "module"
+	},
+	"rules": {
+		"indent": ["error", 4],
+		"eol-last": 0,
+		"camelcase": 0,
+        "comma-dangle": 0,
+        "linebreak-style": 0,
+        "max-len": [2, 120, 4],
+        "require-jsdoc": [2, {
+            "require": {
+                "FunctionDeclaration": false,
+                "MethodDefinition": false,
+                "ClassDeclaration": false
+            }
+        }],
+        "guard-for-in": 0
+	}
+}
